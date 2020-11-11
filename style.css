@@ -1,0 +1,47 @@
+body {
+    background-image: url("./assets/desktop/bg-image-daytime.jpg");
+    background-position: top 20% center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
+main {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.qoute {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 26px;
+    margin-left: 26px;
+}
+.qoute p {
+    font-size: 12px;
+    line-height: 22px;
+    width: 290px;
+}
+.qoute span {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.qoute svg {
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    padding-left: 16.7px;
+}
+.information {
+    transform: translateY(-9999px);
+}
