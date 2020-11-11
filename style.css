@@ -17,14 +17,14 @@ main {
     color: #fff;
     z-index: 1;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 352px auto;
+    margin: 0 26px;
 }
+/* QOUTE SECTION STYLING */
 .qoute {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-right: 26px;
-    margin-left: 26px;
 }
 .qoute p {
     font-size: 12px;
@@ -42,6 +42,71 @@ main {
     right: 0px;
     padding-left: 16.7px;
 }
-.information {
-    transform: translateY(-9999px);
+/* CLOCK SECTION STYLING */
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+}
+.clock div {
+    display: flex;
+    align-items: center;
+}
+.clock div img {
+    padding-right: 16.4px;
+}
+.clock div p {
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin: 0;
+    flex-grow: 2;
+    /* align-self: flex-start; */
+}
+.current-time {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    line-height: 100px;
+    margin: 0;
+}
+.current-time .timezone {
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.location {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 60px;
+}
+/* BUTTON STYLING */
+button {
+    border-radius: 28px;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 17px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(0,0,0, 0.5);
+    letter-spacing: 3px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+button span {
+    padding-left: 15px;
+    /* padding-right: 4px; */
 }
