@@ -8,7 +8,6 @@ body {
     position: absolute;
     top: -9999px !important;
     left: -9999px !important;
-    transition:  all 1s ease-in-out;
 }
 .overlay {
     position: absolute;
