@@ -1,4 +1,21 @@
-// --------------------------------------- \\
+const slide = gsap.timeline();
+slide.to("main, .information", {duration: 1.5, y: -275});
+slide.reversed(true);
+function slideAnimation() {
+    slide.reversed(!slide.reversed());
+}
+const rotate = gsap.timeline();
+rotate.to(".arrow", {duration: 1.5, rotation: 180});
+rotate.reversed(true);
+function rotateAnimation() {
+    rotate.reversed(!rotate.reversed());
+}
+document.querySelector('button').addEventListener('click', () => {
+    document.querySelector('.information').classList.toggle('hide');
+    slideAnimation();
+    rotateAnimation();
+});
+// ----------------------------------------- \\
 let timeUrl = 'http://worldtimeapi.org/api/ip';
 fetch(timeUrl)
 .then(res => res.json())
@@ -21,9 +38,15 @@ fetch(locationUrl)
     document.querySelector('.location-span').textContent = `${locationData.city}, ${locationData.region_name}`;
 });
 // --------------------------------------------- \\
-// let qouteUrl = 'https://programming-qoutes-api.herokuapp.com/qoutes/lang/en/';
-// fetch(qouteUrl)
-// .then(res => res.json())
-// .then(qouteData => {
-//     console.log(qouteData);
-// });
+let quoteUrl = 'http://quotes.stormconsultancy.co.uk/random.json';
+const getQuotes = async function() {
+    fetch(quoteUrl)
+    .then(res => res.json())
+    .then(quoteData => {
+        document.querySelector('.quote-p').textContent = `"${quoteData.quote}"`;
+        document.querySelector('.quote-author').textContent = quoteData.author;
+    });
+}
+document.querySelector('.new-quote-btn').addEventListener('click', () => {
+    getQuotes();
+});
