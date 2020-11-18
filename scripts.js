@@ -38,6 +38,8 @@ fetch(timeUrl)
         document.querySelector('img.icon').src = './assets/desktop/icon-moon.svg';
         document.querySelector('body').style.backgroundImage = 'url(./assets/mobile/bg-image-nighttime.jpg)';
         document.querySelector('body').style.backgroundPosition = 'top center';
+        document.querySelector('.information').style.backgroundColor = 'rgba(0,0,0, .75)';
+        document.querySelector('.information').style.color = '#fff';
     }
     document.querySelector('.day-year').textContent = timeData.day_of_year;
     document.querySelector('.day-week').textContent = timeData.day_of_week;
