@@ -1,3 +1,4 @@
+// ----------------- GSAP ANIMATIONS --------------- \\
 const slide = gsap.timeline();
 slide.to("main, .information", {duration: 1.5, y: -275});
 slide.reversed(true);
@@ -12,6 +13,8 @@ function rotateAnimation() {
 }
 document.querySelector('button').addEventListener('click', () => {
     document.querySelector('.information').classList.toggle('hide');
+    document.querySelector('.information').style.position = 'absolute';
+    document.querySelector('.information').style.bottom = '-280px';
     slideAnimation();
     rotateAnimation();
 });
@@ -33,6 +36,8 @@ fetch(timeUrl)
     } else {
         document.querySelector('.greeting').textContent = 'Good Evening';
         document.querySelector('img.icon').src = './assets/desktop/icon-moon.svg';
+        document.querySelector('body').style.backgroundImage = 'url(./assets/mobile/bg-image-nighttime.jpg)';
+        document.querySelector('body').style.backgroundPosition = 'top center';
     }
     document.querySelector('.day-year').textContent = timeData.day_of_year;
     document.querySelector('.day-week').textContent = timeData.day_of_week;
